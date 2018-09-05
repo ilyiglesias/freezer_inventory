@@ -1,0 +1,316 @@
+STATION,LATITUDE,LONGITUDE,STATION_BOTTOM_DEPTH,STRATA,ACTIVE,AREA,NOTES
+101,3618,12156.3,65,SC,Y,Point Sur,
+102,3618,12157.7,77,SC,N,Point Sur,
+103,3618,12200.9,102,SC,Y,Point Sur,
+104,3618,12205.4,354,SC,Y,Point Sur,
+105,3618,12211.5,828,SC,Y,Point Sur,
+106,3618,12218.5,928,SC,Y,Point Sur,
+109,3635,12202,608,C,Y,Monterey Bay Outside,
+110,3635,12210.5,2304,C,Y,Monterey Bay Outside,
+111,3638.7,12151.8,46,C,N,Monterey Bay Inside,In 2013 NOAA ships stopped sampling shallower than 50m
+112,3639.3,12156.8,73,C,Y,Monterey Bay Inside,
+113,3638.8,12203,900,C,Y,Monterey Bay Outside,
+114,3646,12152,73,C,Y,Monterey Bay Inside,
+115,3642.5,12154.5,91,C,Y,Monterey Bay Inside,
+116,3644.4,12158.6,287,C,Y,Monterey Bay Inside,
+117,3642,12206.5,1920,C,Y,Monterey Bay Outside,
+118,3646.4,12209,966,C,N,Monterey Bay Outside,Stopped sampling in 2015
+119,3650.8,12159,91,C,Y,Monterey Bay Inside,
+120,3654.8,12155.5,26,C,N,Davenport,
+121,3653.4,12205.2,77,C,N,Davenport,
+122,3659,12212.5,42,C,N,Davenport,Stopped sampling in 1997 due to jellyfish
+123,3659,12217.5,82,C,Y,Davenport,
+124,3659,12222.5,128,C,Y,Davenport,
+125,3659,12225.5,446,C,Y,Davenport,
+126,3659,12235.5,432,C,Y,Davenport,
+127,3659,12245.5,1045,C,Y,Davenport,Resumed sampling in 2002
+128,3659,12249,1395,C,N,Davenport,
+129,3659,12255.6,1858,C,N,Davenport,
+130,3716.5,12229,51,C,N,Pescadero,Stopped sampling in 1997 due to jellyfish
+131,3716.5,12234,82,C,Y,Pescadero,
+132,3716.5,12239,95,C,Y,Pescadero,
+133,3716.5,12249,184,C,Y,Pescadero,
+134,3716.5,12259,518,C,Y,Pescadero,
+135,3716.5,12309,950,C,Y,Pescadero,Resumed sampling in 2002
+136,3741.3,12233.5,25,C,N,Gulf of the Farallones,
+137,3738,12246,53,C,N,Gulf of the Farallones,Stopped sampling in 1997 due to jellyfish
+138,3742,12254.5,55,C,Y,Gulf of the Farallones,
+139,3747.5,12252,55,C,Y,Gulf of the Farallones,
+140,3751.3,12237.9,20,C,N,Gulf of the Farallones,
+141,3751,12246,40,C,N,Gulf of the Farallones,Stopped sampling in 1997 due to jellyfish
+142,3755.7,12247.2,31,C,N,Gulf of the Farallones,
+143,3758,12256,51,C,N,Gulf of the Farallones,Stopped sampling in 1997 due to jellyfish
+144,3737,12302.5,212,C,N,Farallones Outside,
+145,3737,12307.8,1029,C,N,Farallones Outside,
+148,3736.8,12324.5,2045,C,N,Farallones Outside,
+149,3736.5,12330.5,2978,C,N,Farallones Outside,
+150,3736.5,12337,3308,C,N,Farallones Outside,
+151,3736.5,12343.5,3390,C,N,Farallones Outside,
+152,3739.5,12302.5,108,C,Y,Farallones Outside,
+153,3739.5,12307.5,674,C,N,Farallones Outside,
+154,3739.5,12312.5,1301,C,Y,Farallones Outside,
+155,3740.6,12318.1,1775,C,N,Farallones Outside,
+156,3744.6,12308.3,91,C,Y,Farallones Outside,
+157,3748,12311.5,57,C,N,Farallones Outside,
+158,3753,12305.2,89,C,N,Farallones Outside,
+159,3753,12311.5,93,C,N,Farallones Outside,
+160,3753,12319,91,C,Y,Farallones Outside,
+161,3753,12324.9,198,C,N,Farallones Outside,
+162,3753,12330,1328,C,Y,Farallones Outside,
+163,3753,12334,2263,C,N,Farallones Outside,
+164,3753,12338,2609,C,N,Farallones Outside,
+165,3810,12300,55,C,Y,Point Reyes,
+166,3809.5,12305,73,C,N,Point Reyes,Stopped sampling in 2016
+167,3810,12310,91,C,Y,Point Reyes,
+168,3810,12317,120,C,N,Point Reyes,Stopped sampling in 2016
+169,3810,12320,144,C,N,Point Reyes,
+170,3810,12322,183,C,Y,Point Reyes,
+171,3810,12329,400,C,Y,Point Reyes,Resumed sampling in 2002
+172,3810,12332,556,C,N,Point Reyes,
+173,3810,12336.8,1277,C,N,Point Reyes,
+174,3810,12342.5,2063,C,Y,Point Reyes,Resumed sampling in 2016
+175,3810,12352,3370,C,N,Point Reyes,
+176,3810,12402,3615,C,N,Point Reyes,
+177,3810,12412,3698,C,N,Point Reyes,
+178,3810,12422,3661,C,N,Point Reyes,
+179,3810,12433,3500,C,N,Point Reyes,
+180,3810,12445,3932,C,N,Point Reyes,
+181,3810,12500,3840,C,N,Point Reyes,
+182,3828,12310.5,25,NC,N,Fort Ross,
+183,3828,12314,53,NC,Y,Fort Ross,
+184,3828,12315.4,73,NC,N,Fort Ross,
+186,3828,12326.5,134,NC,N,Fort Ross,
+187,3828,12335.6,205,NC,N,Fort Ross,
+193,3902,12343.3,29,NC,N,Navarro,
+194,3902,12344.1,42,NC,N,Navarro,
+195,3902,12346.3,67,NC,N,Navarro,
+196,3902,12348.8,90,NC,N,Navarro,
+197,3902,12359.1,450,NC,N,Navarro,
+202,3920,12350.2,14,NC,N,Navarro,
+203,3920,12355.3,137,NC,N,Navarro,
+204,3920,12400,416,NC,N,Navarro,
+205,3920,12405,645,NC,N,Navarro,
+211,3635,12219.5,2516,C,Y,Monterey Outside,Added in 2015
+212,3635,12231,2997,C,Y,Monterey Outside,Added in 2016
+213,3635,12250,2860,C,N,Monterey Outside,Added in 2016
+214,3635,12310,3302,C,N,Monterey Outside,Added in 2016
+215,3635,12330,3596,C,N,Monterey Outside,Added in 2016
+216,3635,12350,3813,C,N,Monterey Outside,Added in 2016
+231,3716.5,12317,2326,C,N,Pescadero,Added in 2016
+232,3716.5,12337,3440,C,N,Pescadero,Added in 2016
+233,3716.5,12357,3698,C,N,Pescadero,Added in 2016
+234,3716.5,12417,3971,C,N,Pescadero,Added in 2016
+237,3735.8,12249.9,74,C,Y,Gulf of the Farallones,Added in 2000
+401,3243,11812,1586,S,Y,San Clemente,Added in 2004
+402,3243,11827.2,222,S,Y,San Clemente,Added in 2004
+403,3243,11844.9,1253,S,Y,San Clemente,Added in 2004
+404,3243,11901,777,S,Y,San Clemente,Added in 2004
+410,3345.8,11910.3,655,S,N,San Nicolas,Added in 2004
+411,3341.4,11917.2,892,S,Y,San Nicolas,Added in 2004
+412,3335.2,11926.9,1874,S,Y,San Nicolas,Added in 2004
+413,3329.2,11936.3,775,S,Y,San Nicolas,Added in 2004
+414,3323,11945.8,103,S,Y,San Nicolas,Added in 2004
+415,3319,11952,515,S,N,San Nicolas,Added in 2004
+421,3425.6,12013,85,S,N,San Miguel,Added in 2004
+422,3419.1,12018,380,S,Y,San Miguel,Added in 2004
+423,3410.6,12028.3,122,S,Y,San Miguel,Added in 2004
+424,3404.2,12034.7,190,S,Y,San Miguel,Added in 2004
+425,3355.1,12042.7,1848,S,Y,San Miguel,Added in 2004
+426,3420,12002,545,S,N,Santa Barbara,Added in 2004
+427,3419,11951,351,S,N,Santa Barbara,Added in 2004
+431,3437,12042.5,60,S,N,Vandenberg,Added in 2004
+432,3437,12045.8,92,S,N,Vandenberg,Added in 2004
+433,3437,12051.8,297,S,N,Vandenberg,Added in 2004
+434,3437,12110,786,S,N,Vandenberg,Added in 2004
+435,3437,12125,1227,S,N,Vandenberg,Added in 2004
+441,3542.2,12121.8,60,SC,Y,Piedras Blancas,Added in 2004
+442,3542.2,12125.8,167,SC,Y,Piedras Blancas,Added in 2004
+443,3542.2,12130.5,557,SC,Y,Piedras Blancas,Added in 2004
+444,3542.2,12142,885,SC,Y,Piedras Blancas,Added in 2004
+445,3542.2,12152,1050,SC,Y,Piedras Blancas,Added in 2004
+452,3828,12318.5,92,NC,N,Fort Ross,Added in 2004
+453,3828,12323.2,115,NC,Y,Fort Ross,Added in 2004
+454,3828,12342.6,910,NC,Y,Fort Ross,Added in 2004
+455,3828,12403.5,3263,NC,Y,Fort Ross,Added in 2004
+461,3908,12347,73,NC,Y,Navarro,Added in 2004
+462,3908,12351,106,NC,N,Navarro,Added in 2004
+463,3908,12400,404,NC,Y,Navarro,Added in 2004
+464,3908,12419,2153,NC,Y,Navarro,Added in 2004
+465,3908,12436,3292,NC,Y,Navarro,Added in 2004
+466,3908,12457,3279,NC,N,Navarro,Added in 2016
+467,3908,12517,3265,NC,N,Navarro,Added in 2016
+468,3908,12537,3626,NC,N,Navarro,Added in 2016
+471,3950,12355,65,NC,Y,Delgada,Added in 2004
+472,3950,12358.8,120,NC,N,Delgada,Added in 2004
+473,3950,12406.5,236,NC,Y,Delgada,Added in 2004
+474,3950,12424,1600,NC,Y,Delgada,Added in 2004
+475,3950,12443,1344,NC,Y,Delgada,Added in 2004
+476,3950,12505,2037,NC,N,Delgada,Added in 2016
+477,3950,12526,3251,NC,N,Delgada,Added in 2016
+478,3950,12547,3475,NC,N,Delgada,Added in 2016
+481,3301,11745,798,S,Y,San Diego,Added in 2004
+482,3255,11735,865,S,Y,San Diego,Added in 2004
+483,3249,11725.3,555,S,Y,San Diego,Added in 2004
+484,3242.5,11720,94,S,Y,San Diego,Added in 2004
+491,3500,12044,55,SC,Y,Point Sal,Added in 2006
+492,3500,12047.6,94,SC,Y,Point Sal,Added in 2006
+493,3500,12053,192,SC,Y,Point Sal,Added in 2006
+494,3500,12058.5,374,SC,Y,Point Sal,Added in 2006
+495,3500,12107,532,SC,Y,Point Sal,Added in 2006
+601,4030,12431.6,61,N,Y,False Cape,Added in 2013
+602,4030,12437.2,187,N,Y,False Cape,Added in 2013
+603,4030,12443.8,1622,N,Y,False Cape,Added in 2013
+605,4030,12457,2565,N,Y,False Cape,Added in 2013
+607,4030,12510.2,2634,N,Y,False Cape,Added in 2013
+611,4100,12416.2,79,N,Y,Trinidad Head,Added in 2013
+612,4100,12422.8,192,N,Y,Trinidad Head,Added in 2013
+613,4100,12429.4,520,N,Y,Trinidad Head,Added in 2013
+615,4100,12442.6,743,N,Y,Trinidad Head,Added in 2013
+617,4100,12455.8,2804,N,Y,Trinidad Head,Added in 2013
+621,4130,12415.6,66,N,Y,Flint Rock Head,Added in 2013
+622,4130,12422.2,96,N,Y,Flint Rock Head,Added in 2013
+623,4130,12428.8,169,N,Y,Flint Rock Head,Added in 2013
+625,4130,12442,946,N,Y,Flint Rock Head,Added in 2013
+627,4130,12455.2,690,N,Y,Flint Rock Head,Added in 2013
+1001,3653,12156,37,C,Y,Monterey Bay Inside,
+1002,3640,12210,1134,C,Y,Monterey Bay Outside,
+1003,3646.3,12216.1,823,C,Y,Monterey Bay Outside,
+1004,3646.3,12228.4,2103,C,Y,Monterey Bay Outside,
+1005,3640,12222.3,1737,C,Y,Monterey Bay Outside,
+1006,3633.7,12216.2,2560,C,Y,Monterey Bay Outside,
+1007,3633.7,12228.4,2743,C,Y,Monterey Bay Outside,
+1008,3640,12234.6,2377,C,Y,Monterey Bay Outside,
+1009,3646.3,12240.7,2149,C,Y,Monterey Bay Outside,
+1010,3633.7,12240.7,2743,C,Y,Monterey Bay Outside,
+1011,3652.6,12210,91,C,Y,Davenport,
+1012,3652.6,12222.3,1180,C,Y,Davenport,
+1013,3652.6,12234.6,1600,C,Y,Davenport,
+1014,3652.6,12247,2286,C,Y,Davenport,
+1015,3652.6,12259.3,2697,C,Y,Davenport,
+1016,3659,12253,1411,C,Y,Davenport,
+1017,3705,12247,686,C,Y,Davenport,
+1018,3705,12234.6,119,C,Y,Davenport,
+1019,3705,12222.3,59,C,Y,Davenport,
+1020,3710.7,12228.4,68,C,Y,Pescadero,
+1021,3710.7,12240.7,110,C,Y,Pescadero,
+1022,3710.7,12253,421,C,Y,Pescadero,
+1023,3710.7,12305.3,869,C,Y,Pescadero,
+1024,3716.5,12311.4,1189,C,N,Pescadero,
+1025,3722.3,12305.3,823,C,Y,Pescadero,
+1026,3722.3,12253,201,C,Y,Pescadero,
+1027,3722.3,12240.7,88,C,Y,Pescadero,
+1028,3722.3,12228.4,27,C,Y,Pescadero,
+1029,3730.8,12259.3,229,C,Y,Farallones Outside,
+1030,3730.8,12311.6,1280,C,Y,Farallones Outside,
+1031,3730.8,12324,2415,C,Y,Farallones Outside,
+1032,3730.8,12336.3,3215,C,Y,Farallones Outside,
+1033,3738.4,12336.3,3338,C,Y,Farallones Outside,
+1034,3746.2,12336.3,2697,C,Y,Farallones Outside,
+1035,3746.2,12324,1509,C,Y,Farallones Outside,
+1036,3746.2,12311.6,128,C,Y,Farallones Outside,
+1037,3801.6,12330.1,137,C,Y,Point Reyes,
+1038,3801.6,12342.4,2560,C,Y,Point Reyes,
+1039,3801.6,12354.7,3475,C,Y,Point Reyes,
+1040,3810,12407,3658,C,Y,Point Reyes,
+1041,3818.5,12354.7,2835,C,Y,Point Reyes,
+1042,3818.5,12342.4,1463,C,Y,Point Reyes,
+1043,3818.5,12330.1,274,C,Y,Point Reyes,
+1044,3818.5,12317.8,110,C,Y,Point Reyes,
+1045,3801.6,12317.8,119,C,Y,Point Reyes,
+1046,3801.6,12305.5,64,C,Y,Point Reyes,
+1048,3818.5,12310,83,C,Y,Point Reyes,
+1100,3610,12148,498,SC,Y,Point Sur,Added in 2012
+1101,3610,12200,984,SC,Y,Point Sur,Added in 2012
+1102,3610,12212,1289,SC,Y,Point Sur,Added in 2012
+1103,3610,12224,1773,SC,Y,Point Sur,Added in 2012
+1104,3626,12224,1785,SC,Y,Point Sur,Added in 2012
+1105,3626,12212,1041,SC,Y,Point Sur,Added in 2012
+1106,3626,12200,560,SC,Y,Point Sur,Added in 2012
+4001,3331.3,11915.4,985,S,N,San Nicolas,Added in 2004
+4002,3324.4,11924.2,963,S,Y,San Nicolas,Added in 2004
+4003,3320.2,11932.5,85,S,Y,San Nicolas,Added in 2004
+4004,3312.6,11944.3,460,S,Y,San Nicolas,Added in 2004
+4005,3326.5,12001.6,976,S,N,San Nicolas,Added in 2004
+4006,3332.5,11951.4,330,S,Y,San Nicolas,Added in 2004
+4007,3337.8,11941.6,1366,S,Y,San Nicolas,Added in 2004
+4008,3344.6,11932.5,1930,S,Y,San Nicolas,Added in 2004
+4009,3357.4,12025.5,165,S,N,San Miguel,Added in 2004
+4010,3349.3,12033.1,1819,S,Y,San Miguel,Added in 2004
+4011,3401.8,12051.6,948,S,Y,San Miguel,Added in 2004
+4012,3409.8,12044.6,738,S,Y,San Miguel,Added in 2004
+4013,3417.7,12037.5,515,S,N,San Miguel,Added in 2004
+4014,3425,12029.6,100,S,N,San Miguel,Added in 2004
+4015,3426.8,12044.3,493,S,N,Vandenberg,Added in 2004
+4016,3426.8,12057,900,S,N,Vandenberg,Added in 2004
+4017,3426.8,12109,1413,S,N,Vandenberg,Added in 2004
+4018,3426.8,12121.3,2148,S,N,Vandenberg,Added in 2004
+4019,3447.1,12121.3,482,S,N,Vandenberg,Added in 2004
+4020,3447.1,12108.9,566,S,N,Vandenberg,Added in 2004
+4021,3447.1,12056.6,304,S,N,Vandenberg,Added in 2004
+4022,3447.1,12044.5,77,S,N,Vandenberg,Added in 2004
+4023,3532.1,12121.8,516,SC,Y,Piedras Blancas,Added in 2004
+4024,3532.1,12134.1,848,SC,Y,Piedras Blancas,Added in 2004
+4025,3532.1,12146.3,1007,SC,Y,Piedras Blancas,Added in 2004
+4026,3532.1,12158.8,1258,SC,N,Piedras Blancas,Added in 2004
+4027,3552,12158.8,1353,SC,Y,Piedras Blancas,Added in 2004
+4028,3552,12146.4,968,SC,Y,Piedras Blancas,Added in 2004
+4029,3552,12134,510,SC,Y,Piedras Blancas,Added in 2004
+4030,3818.5,12407.7,3600,C,Y,Point Reyes,Added in 2004
+4031,3828,12424,3500,NC,Y,Fort Ross,Added in 2004
+4032,3850,12347,111,NC,Y,Navarro,Added in 2004
+4033,3850,12404,1805,NC,Y,Navarro,Added in 2004
+4034,3850,12420,3300,NC,Y,Navarro,Added in 2004
+4035,3850,12437,3500,NC,Y,Navarro,Added in 2004
+4036,3930,12402,630,NC,Y,Delgada,Added in 2004
+4037,3930,12417,1800,NC,Y,Delgada,Added in 2004
+4038,3930,12435,2300,NC,Y,Delgada,Added in 2004
+4039,3930,12453,2807,NC,Y,Delgada,Added in 2004
+4041,3242.5,11727,582,S,Y,San Diego,Added in 2004
+4042,3247.9,11737,1020,S,Y,San Diego,Added in 2004
+4043,3254.5,11746.7,1040,S,Y,San Diego,Added in 2004
+4044,3306,11752,382,S,N,San Diego,Added in 2004
+4045,3308,11742,810,S,Y,San Diego,Added in 2004
+4046,3302,11732.3,700,S,Y,San Diego,Added in 2004
+4047,3254.4,11723,550,S,Y,San Diego,Added in 2004
+4048,3243,11757,520,S,Y,San Clemente,Added in 2004
+4049,3233,11757,963,S,Y,San Clemente,Added in 2004
+4050,3233,11809,1900,S,Y,San Clemente,Added in 2004
+4051,3233,11821,1385,S,Y,San Clemente,Added in 2004
+4052,3233,11833,1111,S,Y,San Clemente,Added in 2004
+4053,3233,11845,714,S,N,San Clemente,Added in 2004
+4054,3233,11857,1203,S,N,San Clemente,Added in 2004
+4055,4005,12415.2,160,NC,Y,Delgada,Added in 2004
+4056,4005,12428.3,678,NC,Y,Delgada,Added in 2004
+4057,4005,12441.3,1000,NC,Y,Delgada,Added in 2004
+4058,4005,12454.3,1200,NC,Y,Delgada,Added in 2004
+4059,3950,12458,1830,NC,Y,Delgada,Added in 2004
+4060,3625,12220,1527,SC,N,Point Sur,Added in 2004
+4061,3625,12207,791,SC,N,Point Sur,Added in 2004
+4062,3625,12157,95,SC,N,Point Sur,Added in 2004
+4063,3452,12044,62,SC,Y,Point Sal,Added in 2006
+4064,3452,12053.5,221,SC,Y,Point Sal,Added in 2006
+4065,3452,12103,415,SC,Y,Point Sal,Added in 2006
+4066,3452,12112.6,564,SC,Y,Point Sal,Added in 2006
+4067,3507,12112.6,579,SC,Y,Point Sal,Added in 2006
+4068,3507,12103,457,SC,Y,Point Sal,Added in 2006
+4069,3507,12053.5,154,SC,Y,Point Sal,Added in 2006
+4070,3507,12044,38,SC,Y,Point Sal,Added in 2006
+4071,3957.5,12505,1750,NC,N,Delgada,Added in 2004
+4072,3957.5,12456.25,1510,NC,N,Delgada,Added in 2004
+4073,3940,12449,2550,NC,N,Delgada,Added in 2004
+4074,3940,12500,2685,NC,N,Delgada,Added in 2004
+4075,3859,12437,3550,NC,N,Navarro,Added in 2004
+4076,3908,12450,3250,NC,N,Navarro,Added in 2004
+4077,3836,12407,2703,NC,N,Fort Ross,Added in 2004
+4078,3918.75,12451.5,3050,NC,N,Navarro,Added in 2004
+4079,3839,12437,3602,NC,N,Fort Ross,Added in 2004
+4080,3828,12437,3800,NC,N,Fort Ross,Added in 2004
+4081,3753,12339.08,2730,C,N,Farallones Outside,Added 6/1/2007
+6001,4045,12427,104,N,Y,Trinidad Head,Added in 2013
+6002,4045,12439,768,N,Y,Trinidad Head,Added in 2013
+6003,4045,12451,2326,N,Y,Trinidad Head,Added in 2013
+6004,4045,12503,2704,N,Y,Trinidad Head,Added in 2013
+6011,4115,12416,90,N,Y,Flint Rock Head,Added in 2013
+6012,4115,12428,643,N,Y,Flint Rock Head,Added in 2013
+6013,4115,12440,1145,N,Y,Flint Rock Head,Added in 2013
+6014,4115,12452,1241,N,Y,Flint Rock Head,Added in 2013

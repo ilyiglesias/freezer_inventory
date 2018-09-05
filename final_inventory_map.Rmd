@@ -1,0 +1,171 @@
+---
+title: "Stable Isotope Freezer Inventory"
+output: html_notebook
+---
+
+### Project: Inventory of frozen biological samples collected by the Southwest Fisheries Science Center, Santa Cruz
+I created an inventory of the samples collected to date originally for stable isotopes as part of the annual Rockfish Recruitment and Ecosystem Survey. Starting in 2013, samples were collected for Hopkins (Steve Litvin) in the hopes of creating an "isoscape." However, many samples remain and this project is meant to categorize what exists in our freezer currently and to facilitate future use by interested researchers. 
+
+#### Note about inventory database:
+The database is contained in IlyIglesias's NOAA server (rockfish/projects/stableisotopes) 
+These data were updated so that spp codes match those from cruise data and there were no further formating issues. 
+### ILY TO DO: 
+Note that eventually this data will include the updated samples inventoried by Chris (Hollings Scholar)
+* replace " " with NA
+* add chris data
+* check on lat long for two weird lines- see notes
+* add species codes!
+* remove all letters before cruise # (ie 1802 instead of RL1802) and ensure that each value has a cruise # (for those samples collected on the cruise- others may not have this info)
+* fuck it -- i went through and added dates for missing date info to the best of my ability (total of 30)
+* NOTE: juv_haul is the spreadsheet from 2018 and is the only 2018 data I have to date (ie dbo_juv_haul is different than the juv_haul used for the shiny app which only goes to 2017)
+```{r load inventory database}
+# load libraries
+library(tidyverse)
+library(lubridate)
+library(sf)
+# maybe leaflet, maybe ggmap 
+```
+
+```{r}
+# load inventory database
+inventory <- read.csv("data/stable_isotope_inventory.csv", na.strings= " ", header = TRUE, stringsAsFactors = FALSE) # stringsAsFactors-- imports values as character instead of factor
+# parse date and create new year column
+inventory <-  inventory %>% 
+               mutate(parsed_date= parse_date_time(inventory$date, orders= "mdy"), year=year(parsed_date))%>% # parsed date and time and created a new column for year
+               select(-date)  # this just removes our original date column
+# sum(is.na(inventory$year)) --- note that 5 rows are missing date information- these are mainly bongo samples and unfortunately are also missing other pertinent info (haul_no ect.) and can't be linked up. Note also that I added date values from the original missing values based on haul data.
+
+#remove weird stations written on bags with decimal values (which don't match any of our existing station data)-- 
+# these station values will come instead from the haul_info df based on haul # and year
+inventory$station <-  replace(x= inventory$station, list= grep(pattern = "\\.", x=inventory$station), values= "NA") # this changes all strings containing a "." to NA
+
+#convert from character to numeric
+inventory$station<- as.numeric(as.character(inventory$station)) # error message "NAs introduced by coercion" going to ignore, looks good
+
+inventory$haul_no <- as.numeric(as.character(inventory$haul_no)) # convert haul_no to numeric-- this converted our "NA" characters to actual NAs I believe
+
+#sum(is.na(inventory$haul_no)) #hmmm 1066 lines without station info-- only 325 without haul info
+
+```
+### ILY TO DO: I need to merge these data with species codes eventually!!! 
+
+
+
+
+
+
+
+### The next task involves filling in missing station information based on haul and date info 
+(year and haul # should give station information)
+```{r create df of station info}
+# create df of all stations including latitude and longitude values
+swfsc_stations <- read.csv("data/dbo_STANDARD_STATIONS.csv", na.strings= " ", header = TRUE) # note na.strings for blank cells to convert to NAs
+nwfsc_stations <- read.csv("data/dbo_NWFSC_STANDARD_STATIONS.csv", na.strings= " ",header = TRUE)
+
+# combine station lists from the SWFSC (stations) with the list from the NWFSC (nwfsc_stations) via rbind
+swfsc_stations<- swfsc_stations %>% 
+                  select(-ACTIVE)%>% # remove "ACTIVE" column from swfsc_stations df, so that these two dfs are the same for the rbind merge
+                  mutate(SCI_CENTER= "SWFSC") # create a new columns for science center in case I ever wish to select by this later
+
+nwfsc_stations <-mutate(nwfsc_stations, SCI_CENTER="NWFSC") # create a new column for science center
+nwfsc_stations$LATITUDE <- as.numeric(as.character(nwfsc_stations$LATITUDE)) # convert latitude values from integer to numeric- check through str() 
+
+
+
+stations<- rbind(swfsc_stations, nwfsc_stations) # combine rows from two dfs into one df, stations
+rm(nwfsc_stations, swfsc_stations)
+
+# convert degree minutes to decimal degrees
+stations <- stations %>% 
+            rename(y = LATITUDE, x = LONGITUDE) %>% 
+            mutate(lat.d  = as.numeric(str_sub(y, 1, 2)),
+            lat.m  = as.numeric(str_sub(y, 3, 7)),
+            LATITUDE    = lat.d + lat.m/60,
+            long.d = as.numeric(str_sub(x, 1, 3)),
+            long.m = as.numeric(str_sub(x, 4, 8)),
+            LONGITUDE = -(long.d + long.m/60)) %>%
+            select(-c(lat.d, long.d, lat.m, long.m, x, y))
+
+# note that this table has 414 stations, tho in all our catch data with standard stations, there are only 170 stations trawled, and likely a lot less for our data
+#sum(is.na(stations$STATION)) # at this point there aren't any station without info
+
+```
+
+### Determine haul information (dbo_JUV_HAUL) and select for date, haul # and station information
+
+```{r}
+# create a list of haul #, year and lat long data to merge with our inventory info!
+
+haul <- read.csv("data/dbo_JUV_HAUL.csv", header = TRUE, stringsAsFactors = FALSE) # read in haul data from haul table 
+haul_info <- haul %>%
+             select(HAUL_NO, HAUL_DATE, STATION) %>% 
+             mutate(date=parse_date_time(HAUL_DATE, "mdy HM")) %>% # convert date and time format into something usable by {lubridate} note i only used hours minutes- instead of HMS so times may be off which I don't need for this project 
+             mutate(year= year(date)) %>% # create a new column for year of survey so we can select by year and haul number later
+             select(year, STATION, HAUL_NO) %>% 
+             left_join(select(stations, STATION, LATITUDE, LONGITUDE), by= "STATION") %>% # add in lat long data from "stations" df
+             rename(station=STATION, haul_no=HAUL_NO) # wanted the column name to match inventory df
+rm(haul) # only remove stations once i figure this out?!! 
+#sum(is.na(haul_info$station)) # and at this point there are 456 hauls without station info (ie that didn't merge based on year and haul number)
+# this created a df of year, haul, station and lat long for a given station 
+```
+### Now join these two tables and fill in missing values from haul_info_____ THIS IS WHERE SHIT GETS MESSY 
+```{r}
+# join two tables together (inventory df (where some station info is missing but we have haul # and year) and haul_info df (which contains lat long info and station year) 
+# add station information:
+inventory_merge <-  left_join(inventory, select(haul_info, year, station, haul_no), by=c("year", "haul_no")) %>% 
+                    mutate(station= ifelse(is.na(station.y), station.x, station.y)) # fills in missing station information based on haul and year
+
+stations <-  stations %>% 
+             select(STATION, LATITUDE, LONGITUDE) %>% 
+             rename(station=STATION)
+  # above: just selected station, latitude and longitude and converted the station name so it matches the file we would like to join to "station"
+  
+inventory_coords <- left_join(inventory_merge, select(stations, LATITUDE, LONGITUDE, station), by="station") %>% # add lat long information to filled station list 
+  # note that this is a merge with our simple "stations" df instead of the haul_info df which has multiple stations listed- need one with unique values
+                    select(-c(station.x, station.y ))
+  
+rm(inventory_merge, haul_info, inventory, stations)
+
+# note this reduces the many chances for error introduced by the written bags (using the haul_no and year, we can assign stations and avoid the issues with the station labels on the bag- mislabeling, trouble with legibitlity, ect.)
+sum(is.na(inventory_coords$station)) # note that there are still some samples (192) that still appear to be missing station information. In some cases these are bongo samples without haul numbers or simply tissue samples collected from another trip. Either way, it is what it is!
+
+
+```
+
+# plot those samples that have station location information
+```{r}
+inventory<- inventory_coords[complete.cases(inventory_coords), ] # reduces our list of samples from 2,176 to 1,846
+#rm(inventory_coords)
+
+# but for demonstrative purposes: I want to make a plot
+inventory_sf <- st_as_sf(inventory, coords = c("LONGITUDE", "LATITUDE"))
+st_crs(inventory_sf)= 4326 # set the coordinate infomation to crs=4326 WGS84
+
+ggplot() +
+  geom_sf(data=inventory_sf, mapping = aes(color= species))+
+  theme_bw() 
+
+```
+
+### Create an interactive map via leaflet--- eventually create shiny app ###
+```{r}
+leaflet.tile <- "Esri.OceanBasemap" 
+
+# selection based on species
+species <- filter(inventory_sf, inventory_sf$species %in% "blue lanternfish")
+
+
+# A very basic Leaflet map
+m <- leaflet() %>% 
+      addProviderTiles(leaflet.tile) %>% 
+      addMarkers(data = filter(inventory_sf, species %in% "blue lanternfish"), popup = ~as.character(inv_no), label = ~as.character(year),    clusterOptions=markerClusterOptions()) # note if hover reveals year, if click you get inv_no! 
+ 
+  m
+
+# okay, then I just need to figure out how to select by species 
+
+```
+
+for the input i need to create a vector with all of the species
+as well as all of the years
+
