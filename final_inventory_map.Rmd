@@ -141,14 +141,14 @@ inventory<- inventory_coords[complete.cases(inventory_coords), ] # reduces our l
 inventory_sf <- st_as_sf(inventory, coords = c("LONGITUDE", "LATITUDE"))
 st_crs(inventory_sf)= 4326 # set the coordinate infomation to crs=4326 WGS84
 
-ggplot() +
-  geom_sf(data=inventory_sf, mapping = aes(color= species))+
-  theme_bw() 
+#ggplot() +
+#  geom_sf(data=inventory_sf, mapping = aes(color= species))+
+ # theme_bw() 
 
 ```
 
 ### Create an interactive map via leaflet--- eventually create shiny app ###
-```{r}
+
 leaflet.tile <- "Esri.OceanBasemap" 
 
 # selection based on species
@@ -162,10 +162,4 @@ m <- leaflet() %>%
  
   m
 
-# okay, then I just need to figure out how to select by species 
-
-```
-
-for the input i need to create a vector with all of the species
-as well as all of the years
-
+# okay, then I used these exploratory code to create a shiny app (stored in freezer_inventory)
