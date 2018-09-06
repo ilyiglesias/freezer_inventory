@@ -1,9 +1,14 @@
-
+# load libraries
 library(shiny)
 library(leaflet)
 library(tidyverse)
+library(lubridate)
 
-leaflet.tile <- "Esri.OceanBasemap"
+# run code in preparation for shiny app (file: run_shiny_freezer)
+source("data/run_shiny_freezer.R")
+
+# Add basemap
+leaflet.tile <- "Esri.OceanBasemap" 
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
