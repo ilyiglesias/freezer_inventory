@@ -1,8 +1,4 @@
----
-  title: "Stable Isotope Freezer Inventory"
-output: html_notebook
----
-  
+
 ### Project: Inventory of frozen biological samples collected by the Southwest Fisheries Science Center, Santa Cruz
   
 #### Note about inventory database:
@@ -18,7 +14,7 @@ library(tidyverse)
 library(lubridate)
 library(sf)
 library(leaflet)
-```
+
 
 ### Load inventory database
 #And clean up the existing dataframe
@@ -75,7 +71,6 @@ select(-date)  # remove our original date column
     # note that this table has 414 stations, tho in all our catch data with standard stations, there are only 170 stations trawled, and likely a lot less for our data
     #sum(is.na(stations$STATION)) # at this point there aren't any stations without info
     
-    ```
     
     ### Determine haul information (dbo_JUV_HAUL) and select for date, haul # and station information
     #(to merge with our inventory and in turn get lat long information)

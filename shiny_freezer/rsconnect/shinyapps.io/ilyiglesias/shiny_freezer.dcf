@@ -1,0 +1,12 @@
+name: shiny_freezer
+title: shiny_freezer
+username:
+account: ilyiglesias
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 424486
+bundleId: 1573070
+url: https://ilyiglesias.shinyapps.io/shiny_freezer/
+when: 1536259937.91352
+asMultiple: FALSE
+asStatic: FALSE

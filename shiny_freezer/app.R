@@ -3,6 +3,7 @@ library(shiny)
 library(leaflet)
 library(tidyverse)
 library(lubridate)
+library(sf)
 
 # run code in preparation for shiny app (file: run_shiny_freezer)
 source("data/run_shiny_freezer.R")
